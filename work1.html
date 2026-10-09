@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泰山 · 擎天捧日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+        }
+        header p {
+            opacity: 0.85;
+            margin-top: 0.5rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .photo-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .photo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        .img-wrap {
+            width: 100%;
+        }
+        .img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-wrap {
+            padding: 2rem;
+        }
+        .text-wrap h2 {
+            color: #c0392b;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .text-wrap p {
+            font-size: 1.05rem;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+        .quote {
+            background-color: #fef5f5;
+            border-left: 5px solid #c0392b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            .text-wrap {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>泰山摩崖石刻</h1>
+        <p>擎天捧日 · 岱顶古迹</p>
+    </header>
+    <div class="container">
+        <div class="photo-card">
+            <div class="img-wrap">
+                <!-- 把下面src替换成你的图片路径，本地使用可以直接把图片和html放同一文件夹 -->
+                <img src="IMG_20261004_131442.jpg" alt="泰山擎天捧日石刻">
+            </div>
+            <div class="text-wrap">
+                <h2>擎天捧日</h2>
+                <p>“擎天捧日”石刻坐落于泰山岱顶区域，是泰山众多摩崖刻石中极具气势的一处。四字为竖向楷书，朱红漆填刻于巨大花岗岩岩壁之上。</p>
+                <div class="quote">
+                    擎天，托举苍天；捧日，怀抱红日。短短四字，写尽泰山拔地通天、雄峙东方的磅礴气势。
+                </div>
+                <p>泰山石刻是世界文化遗产的重要组成部分，千百年来文人墨客登临泰山，留下海量题刻，山石为纸，铁笔留字，一步一碑，满目华章。</p>
+                <p>站在巨石之下仰望刻字，便可体会古人登泰山时，面对天地山河生出的壮阔胸襟。</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>纯前端静态页面 | 泰山旅行纪念</p>
+    </footer>
+</body>
+</html>

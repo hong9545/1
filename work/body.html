@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>钢琴社招新网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft Yahei", sans-serif;
+            margin: 20px;
+            line-height: 2;
+        }
+        /* 左上角音频按钮 */
+        .audio-box {
+            position: absolute;
+            top:12px;
+            left:12px;
+        }
+        .audio-box button{
+            padding:4px 8px;
+            cursor:pointer;
+        }
+        nav{
+            margin:40px 0 20px;
+            font-size:18px;
+        }
+        nav a{
+            color:#0055bb;
+            text-decoration:none;
+        }
+        section{
+            margin:100px 0;
+        }
+        .back-top{
+            display:inline-block;
+            padding:5px 12px;
+            background:#e8e8e8;
+            margin-top:10px;
+            text-decoration:none;
+            color:#222;
+        }
+        table{
+            border-collapse: collapse;
+            width:92%;
+            margin:15px auto;
+        }
+        table td,table th{
+            border:1px solid #333;
+            padding:10px;
+        }
+        img{
+            max-width:650px;
+        }
+        textarea{
+            width:320px;
+        }
+        #top{
+            height:1px;
+        }
+    </style>
+</head>
+<body>
+    <!--1.左上角点击播放背景音乐 ex3_23-->
+ <div class="audio-box">
+     <audio id="bgAudio" src="bg.mp3"></audio>
+     <button onclick="let aud=document.getElementById('bgAudio');aud.paused?aud.play():aud.pause()">🎵播放/暂停背景音乐</button>
+ </div>
+    <div id="top"></div>
+    <h1 style="text-align:center;margin-top:40px;">钢琴社招新</h1>
+
+    <!--2. 5个内部锚点导航 ex3_12 -->
+    <nav style="text-align:center;">
+        <a href="#intro">社团简介</a> |
+        <a href="#plan">活动安排</a> |
+        <a href="#show">风采展示</a> |
+        <a href="#story">社员故事</a> |
+        <a href="#form">在线报名</a>
+    </nav>
+
+    <!-- ========= 社团简介 ========= -->
+    <section id="intro">
+        <h2>社团简介</h2>
+        <p>钢琴社汇聚热爱钢琴与音乐的同学们。这里不设门槛，无论你是初学入门、想要日常练琴，
+		还是有演奏基础、想尝试合奏，都可以加入我们。我们会开展曲目分享、小型演奏交流、乐曲赏析等活动，
+		以琴会友，在起落的琴键间感受旋律的魅力，一起享受音乐带来的美好。
+        </p>
+        <a href="#top" class="back-top">🔝返回顶部</a>
+    </section>
+
+    <!-- ========= 活动安排 跨列+跨行表格 ex3_16 ========= -->
+    <section id="plan">
+        <h2>活动安排</h2>
+        <table>
+            <tr>
+                <!--标题占4列 colspan=4 -->
+                <th colspan="4">钢琴社 2026 年春季学期活动安排表</th>
+            </tr>
+            <tr align="center">
+                <th>活动名称</th>
+                <th>时间</th>
+                <th>地点教室</th>
+                <th>参与对象</th>
+            </tr>
+            <tr align="center">
+                <td>新成员见面会</td>
+                <td>3月6日 18:30</td>
+                <!--rowspan 跨行合并单元格，两场活动同一间教室 -->
+                <td rowspan="2">艺术楼302教室</td>
+                <td>全体新社员</td>
+            </tr>
+            <tr align="center">
+                <td>钢琴基础教学公开课</td>
+                <td>3月13日 19:00</td>
+                <td>零基础同学</td>
+            </tr>
+            <tr align="center">
+                <td>钢琴排练</td>
+                <td>每周三晚上19:00</td>
+                <td>艺术楼排练室</td>
+                <td>有基础社员</td>
+            </tr>
+            <tr align="center">
+                <td>校园艺术节汇演</td>
+                <td>5月22日</td>
+                <td>学校大礼堂</td>
+                <td>参演队员</td>
+            </tr>
+        </table>
+        <a href="#top" class="back-top">🔝返回顶部</a>
+    </section>
+
+    <!-- ========= 风采展示 图片+embed视频 ex3_19 ex3_25 ========= -->
+    <section id="show">
+        <h2>风采展示</h2>
+        <!--图片点击跳转本页风采展示锚点（单页面，无外部html） -->
+        <a href="#show">
+            <img src="violin.jpg" alt="钢琴社日常演奏照片">
+        </a>
+        <p>社团日常排练合影，点击图片刷新本板块</p>
+
+        <h3>社团短视频</h3>
+        <embed src="show.mp4" width="620" height="350">
+        <br>
+        <a href="#top" class="back-top">🔝返回顶部</a>
+    </section>
+
+    <!-- ========= 社员故事 ========= -->
+    <section id="story">
+        <h2>社员故事</h2>
+        <p>小周是一名大一新生，进入大学之前，他只在网上听过钢琴的乐曲，从来没有实际接触过乐器。路过钢琴社摊位，被悠扬的琴声吸引，鼓起勇气报名入社。刚入社的时候，他连拿琴的姿势都做不好，手指按弦酸痛，运弓拉出刺耳的噪音，练习一段时间之后内心充满挫败感，甚至想过放弃。
+        社团的学长学姐十分耐心，课下一对一纠正他的姿势，告诉他新手手指疼痛属于正常现象，鼓励他不要急于求成，每天坚持短时间练习就足够。他坚持参加每一次公开课，课下跟着教学视频慢慢打磨基础。经过两个多月，他终于可以完整演奏简单的小品乐曲。
+        社团里面有不少性格内向的同学，在一次次排练、沙龙交流之中慢慢打开自己，敢于站在众人面前演奏。有一名大二学姐，从小学习钢琴，来到大学很难找到一起合奏的伙伴，加入社团之后找到了四重奏队友，多次登上学校晚会舞台。
+        社团不只有枯燥练琴，也充满很多温暖有趣的瞬间。音乐沙龙的时候大家围坐在一起轮流演奏，互相给予鼓励；节日期间社团组织团建聚餐，大家聊聊音乐，分享大学生活。很多毕业的学长学姐依旧怀念在社团一起练琴的夜晚。
+        很多同学会自我怀疑，觉得自己没有天赋、学不会乐器。但在钢琴社，热爱远比天赋重要。不需要你一开始就演奏得十分完美，只要愿意投入时间练习，每个人都可以体会演奏的快乐。如果你心中向往弦乐的美好，欢迎加入我们，书写属于你的社团故事。
+        </p>
+        <a href="#top" class="back-top">🔝返回顶部</a>
+    </section>
+
+    <!-- =========在线报名表单全部放在table ex3_30 ========= -->
+    <section id="form">
+        <h2>钢琴社在线报名表</h2>
+        <form>
+            <table>
+                <tr>
+                    <td>①姓名：</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>②性别：</td>
+                    <td>
+                        <input type="radio" name="gender" value="男">男
+                        <input type="radio" name="gender" value="女">女
+                    </td>
+                </tr>
+                <tr>
+                    <td>③出生日期：</td>
+                    <td>
+                        年：<input type="text" name="birth_year" size="4">
+                        月：<input type="text" name="birth_month" size="2">
+                        日：<input type="text" name="birth_day" size="2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>④手机号码：</td>
+                    <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <td>④邮箱：</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>⑤是否有钢琴基础：</td>
+                    <td>
+                        <input type="radio" name="skill" value="有">有
+                        <input type="radio" name="skill" value="无">无
+                    </td>
+                </tr>
+                <tr>
+                    <td>⑥兴趣方向（多选）：</td>
+                    <td>
+                        <input type="checkbox" name="interest" value="古典">古典演奏
+                        <input type="checkbox" name="interest" value="pop">流行改编
+                        <input type="checkbox" name="interest" value="ensemble">重奏合奏
+                        <input type="checkbox" name="interest" value="stage">舞台表演
+                    </td>
+                </tr>
+                <tr>
+                    <td>⑦年级：</td>
+                    <td>
+                        <select name="grade">
+                            <option>大一</option>
+                            <option>大二</option>
+                            <option>大三</option>
+                            <option>大四</option>
+                            <option>研究生</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>⑧自我介绍：</td>
+                    <td>
+                        <textarea name="self_intro" rows="5" placeholder="请简单介绍自己、以及加入钢琴社的理由……"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>⑨是否服从活动安排：</td>
+                    <td>
+                        <input type="radio" name="obey" value="是">是
+                        <input type="radio" name="obey" value="否">否
+                    </td>
+                </tr>
+                <tr>
+                    <td>⑩操作按钮：</td>
+                    <td>
+                        <input type="submit" value="提交">
+                        <input type="reset" value="重置">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <a href="#top" class="back-top">🔝返回顶部</a>
+    </section>
+
+</body>
+</html>

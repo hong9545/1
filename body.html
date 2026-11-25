@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>晨光阅读会 · Morning Reading Club</title>
+<style>
+.page {
+display: inline-block;
+background-color: #FFA54C;
+box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+text-align: left;
+max-width: 720px;
+}
+/* ③并集选择器 */
+h1, h2, h3, h4, h5, h6 {
+    color: #332211;
+}
+/* ④ID选择器 p#intro */
+p#intro {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bb2222;
+}
+/* ⑤带类名的链接 */
+a.red {
+    color: red;
+}
+a.blue {
+    color: blue;
+}
+/* ②链接伪类 */
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    color: #555555;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    color: #ff0000;
+}
+/* ①后代选择器 div table a */
+div table a {
+    color: #007722;
+    font-weight: bold;
+}
+/* ⑥伪元素 */
+p::first-letter {
+    font-size: 2em;
+    color: #771111;
+}
+div::first-line {
+    font-style: italic;
+}
+.notice {
+    margin:15px;
+}
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+th,td {
+    border:1px solid #222;
+    padding:6px;
+}
+</style>
+</head>
+<body>
+<div class="page">
+    <!-- ①顶部标题区 -->
+    <div>
+        <h1>晨光阅读会 · Morning Reading Club</h1>
+    </div>
+
+    <!-- ②活动介绍区 -->
+    <div>
+        <h2 id="intro">阅读会介绍</h2>
+        <p>清晨阳光轻柔洒落，伴着微风，我们围坐在一起诵读篇章，在文字里感受安静与力量，用朗读开启崭新的一天。</p>
+        <p>本社团每周组织晨读活动，读物涵盖诗歌、散文、短篇美文，大家自由朗读、互相交流感悟，欢迎所有热爱文字的同学加入。</p>
+        <p id="intro">重要提示：活动每周一早上7点开始，请提前到场，保持场地安静！</p>
+    </div>
+
+    <!-- ③活动报名信息表格区 -->
+    <div>
+        <h3>晨读成员信息表</h3>
+        <table>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>喜爱读物类型</th>
+                <th>备注</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Lucy</td>
+                <td>英文散文</td>
+                <td><a href="#">可带外文读物分享</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>王浩</td>
+                <td>现代诗歌</td>
+                <td>长期稳定参加晨读</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>陈诺</td>
+                <td>古典诗词</td>
+                <td>擅长领读古诗词</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ④页面链接区 -->
+    <div>
+        <div>
+            <a class="red" href="https://hongchenwusdnu.github.io/bookstore/job4.html">查看往期活动照片</a>
+            &nbsp;&nbsp;
+            <a class="blue" href="job3.html">在线咨询活动详情</a>
+        </div>
+    </div>
+
+    <!-- ⑤底部公告区 -->
+    <div class="notice">
+        公告一：本周晨读地点调整至校园湖畔凉亭，请注意出行路线。<br>
+        公告二：参加活动可以自带喜欢的书籍，我们预留自由分享时间。<br>
+        公告三：阅读会持续招新，不限年级专业，热爱朗读即可报名。
+    </div>
+</div>
+</body>
